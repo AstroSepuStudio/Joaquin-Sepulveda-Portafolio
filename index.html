@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portafolio Cósmico</title>
+  <link rel="stylesheet" href="estilos.css" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="hero-box">
+    <header>
+      <h1>Joaquín Sepúlveda</h1>
+      <p>Diseñador de Videojuegos • Programador de Galaxias</p>
+      <nav>
+        <button type="button" onclick="document.getElementById('sobremi').scrollIntoView()">Sobre mí</button>
+        <button type="button" onclick="document.getElementById('proyectos').scrollIntoView()">Proyectos</button>
+        <button type="button" onclick="document.getElementById('contacto').scrollIntoView()">Contacto</button>
+      </nav>
+    </header>
+  </div>
+
+  <main>
+    <section id="sobremi" class="sobre-mi">
+      <h2>Sobre mí</h2>
+      <div class="sobre-mi-contenido">
+        <img src="images/avatar.png" alt="Foto de Joaquín Sepúlveda" class="avatar"/>
+        <div class="bio">
+          <h3>¡Hola, soy Joaquín!</h3>
+          <p>
+            Soy un desarrollador de videojuegos apasionado por la creación de mundos interactivos y experiencias galácticamente entretenidas. Mi enfoque combina creatividad, lógica y una pizca de locura cósmica para llevar cada proyecto más allá de las estrellas.
+          </p>
+          <p>
+            He trabajado en títulos independientes que abarcan desde plataformas frenéticos hasta simulaciones experimentales. Me encanta aprender tecnologías nuevas, colaborar con equipos multidisciplinarios y convertir ideas en realidad jugable.
+          </p>
+        </div>
+      </div>
+
+      <div class="social-wrapper">
+        <div class="social-block">
+          <h4>Joaquín Sepúlveda (WORDSAW):</h4>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/joaquin-sepulveda-20a355331/" target="_blank" aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://www.youtube.com/@wordsaw" target="_blank" aria-label="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://wordsaw.itch.io" target="_blank" aria-label="Itch.io">
+              <img src="images/itchio-icon.png" alt="Itch.io" class="icon-img"/>
+            </a>
+          </div>
+        </div>
+
+        <div class="social-block">
+          <h4>AstroSepu Studio:</h4>
+          <div class="social-links">
+            <a href="https://www.youtube.com/@AstroSepuStudio" target="_blank" aria-label="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://astrosepu-studio.itch.io" target="_blank" aria-label="Itch.io">
+              <img src="images/itchio-icon.png" alt="Itch.io" class="icon-img"/>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobremi" class="sobre-mi">
+      <div class="video-sobremi">
+        <h2>Video portafolio</h2>
+          <p>
+          <iframe src="https://drive.google.com/file/d/1t-Cjr0Yaw7zDR9TR57Qa5T56EXUGVzpV/preview" width="640" height="480" allow="autoplay"></iframe>
+          </p>
+      </div>
+    </section>
+
+    <section id="proyectos">
+      <h2>Mis Proyectos</h2>
+      <div class="galeria">
+        
+          <div class="proyecto">
+            <img src="images/parkour.png" alt="Parkour Training Arc" />
+            <div class="info">
+              <h3>Parkour Training Arc</h3>
+              <p>Juego de plataformas 2D pixel art con mecánicas de parkour intensas.</p>
+              <a href="https://wordsaw.itch.io/parkour-training-arc" target="_blank">Ver proyecto</a>
+            </div>
+          </div>
+
+          <div class="proyecto">
+            <img src="images/chivivors.png" alt="Chivivors" />
+            <div class="info">
+              <h3>Chivivors</h3>
+              <p>Una horda de monstruos, caos y acción en este juego tipo Vampire Survivors.</p>
+              <a href="https://wordsaw.itch.io/chivivors" target="_blank">Ver proyecto</a>
+            </div>
+          </div>
+
+          <div class="proyecto">
+            <img src="images/perplexity.png" alt="Perplexity" />
+            <div class="info">
+              <h3>Perplexity</h3>
+              <p>Juego de horror atmosférico con estética abstracta inspirada por los conocidos Backrooms.</p>
+              <a href="https://astrosepu-studio.itch.io/perplexity" target="_blank">Ver proyecto</a>
+            </div>
+          </div>
+
+          <div class="proyecto">
+            <img src="images/bubblebind.png" alt="Bubble Bind" />
+            <div class="info">
+              <h3>Bubble Bind</h3>
+              <p>Juego de puzzles 2D con una mecánica única de burbujas que desafiarán tus habilidades cognitivas.</p>
+              <a href="https://astrosepu-studio.itch.io/bubble-bind" target="_blank">Ver proyecto</a>
+            </div>
+          </div>
+        
+          <div class="proyecto">
+            <img src="images/ThiefCats.png" alt="Thief Cats" />
+            <div class="info">
+              <h3>Thief Cats</h3>
+              <p>Juego multijugador en el que los jugadores asumen el papel de gatos ladrones que deben robar objetos valiosos mientras evitan ser atrapados 
+                o el de un perro que debe acabar con ellos.</p>
+              <a href="https://drive.google.com/drive/folders/1iYqIxu1GOjFcpkJjBTsiP8pAgdkIB17f?usp=sharing" target="_blank">Ver proyecto</a>
+            </div>
+          </div>
+        
+      </div>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>Puedes contactarme en: <a href="mailto:joaquinsepulvedaastroza@gmail.com">joaquinsepulvedaastroza@gmail.com</a></p>
+    </section>
+  </main>
+</body>
+</html>
