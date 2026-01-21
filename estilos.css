@@ -262,6 +262,76 @@ main {
   box-shadow: 0 0 25px var(--acento-claro);
 }
 
+/* MODELOS 3D */
+#modelos {
+  padding: 4rem 2rem;
+  background-color: #0d0d2b;
+  text-align: center;
+}
+
+#modelos h2 {
+  font-size: 2.8rem;
+  color: var(--acento-claro);
+  margin-bottom: 3rem;
+}
+
+.galeria-modelos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.modelo-card {
+  background: #1a1a40;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 0 20px #00000055;
+  display: flex;
+  flex-direction: column;
+}
+
+.modelo-card iframe {
+  width: 100%;
+  height: 320px;
+  border: none;
+}
+
+.modelo-card .info {
+  padding: 1.2rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.modelo-card h3 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: var(--acento);
+}
+
+.modelo-card p {
+  flex-grow: 1;
+  color: var(--gris);
+  margin: 0.5rem 0 1rem;
+}
+
+.modelo-card a {
+  align-self: flex-start;
+  background: var(--acento);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.modelo-card a:hover {
+  background: var(--acento-claro);
+}
+
 /* CONTACTO */
 #contacto {
   padding: 4rem 2rem;
