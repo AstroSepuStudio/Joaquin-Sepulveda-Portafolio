@@ -290,6 +290,13 @@ main {
   box-shadow: 0 0 20px #00000055;
   display: flex;
   flex-direction: column;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.modelo-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px var(--acento-claro);
 }
 
 .modelo-card iframe {
