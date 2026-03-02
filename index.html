@@ -6,41 +6,34 @@
   <title>Portafolio Cósmico</title>
   <link rel="stylesheet" href="estilos.css" />
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
   </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+
   <div class="hero-box">
     <header>
       <h1>Joaquín Sepúlveda</h1>
-      <p>Diseñador de Videojuegos • Programador de Galaxias</p>
+      <p data-i18n="subtitle">Diseñador de Videojuegos • Programador de Galaxias</p>
       <nav>
-        <button type="button" onclick="document.getElementById('sobremi').scrollIntoView()">Sobre mí</button>
-        <button type="button" onclick="document.getElementById('proyectos').scrollIntoView()">Proyectos</button>
-        <button type="button" onclick="document.getElementById('contacto').scrollIntoView()">Contacto</button>
+        <button type="button" onclick="document.getElementById('sobremi').scrollIntoView()" data-i18n="nav_about">Sobre mí</button>
+        <button type="button" onclick="document.getElementById('proyectos').scrollIntoView()" data-i18n="nav_projects">Proyectos</button>
+        <button type="button" onclick="document.getElementById('contacto').scrollIntoView()" data-i18n="nav_contact">Contacto</button>
+        <button id="lang-toggle" onclick="toggleLang()">🌐 EN</button>  
       </nav>
     </header>
   </div>
 
   <main>
     <section id="sobremi" class="sobre-mi">
-      <h2>Sobre mí</h2>
+      <h2 data-i18n="section_about">Sobre mí</h2>
       <div class="sobre-mi-contenido">
         <img src="images/avatar.png" alt="Foto de Joaquín Sepúlveda" class="avatar"/>
         <div class="bio">
-          <h3>¡Hola, soy Joaquín!</h3>
-          <p>
-            Soy un desarrollador de videojuegos apasionado por 
-            la creación de mundos interactivos, experiencias entretenidas y desafiantes. 
-            Mi enfoque combina creatividad, lógica y una pizca de locura.
-          </p>
-          <p>
-            He trabajado en títulos independientes que abarcan desde plataformeros frenéticos hasta simulaciones experimentales. 
-            Me encanta aprender tecnologías nuevas, colaborar con equipos multidisciplinarios y convertir ideas en realidad jugable.
-          </p>
+          <h3 data-i18n="greeting">¡Hola, soy Joaquín!</h3>
+          <p data-i18n="bio1">Soy un desarrollador de videojuegos apasionado por la creación de mundos interactivos, experiencias entretenidas y desafiantes. Mi enfoque combina creatividad, lógica y una pizca de locura.</p>
+          <p data-i18n="bio2">He trabajado en títulos independientes que abarcan desde plataformeros frenéticos hasta simulaciones experimentales. Me encanta aprender tecnologías nuevas, colaborar con equipos multidisciplinarios y convertir ideas en realidad jugable.</p>
         </div>
       </div>
 
@@ -48,294 +41,167 @@
         <div class="social-block">
           <h4>Joaquín Sepúlveda (WORDSAW):</h4>
           <div class="social-links">
-            <a href="https://www.linkedin.com/in/joaquin-sepulveda-20a355331/" target="_blank" aria-label="LinkedIn">
-              <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://www.youtube.com/@wordsaw" target="_blank" aria-label="YouTube">
-              <i class="fab fa-youtube"></i>
-            </a>
-            <a href="https://wordsaw.itch.io" target="_blank" aria-label="Itch.io">
-              <img src="images/itchio-icon.png" alt="Itch.io" class="icon-img"/>
-            </a>
-            <a href="https://sketchfab.com/wordsawKS" target="_blank" aria-label="Sketchfab">
-              <img src="images/sketchfab-logo-white.png" alt="Sketchfab" class="icon-img"/>
-            </a>
+            <a href="https://www.linkedin.com/in/joaquin-sepulveda-20a355331/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.youtube.com/@wordsaw" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://wordsaw.itch.io" target="_blank" aria-label="Itch.io"><img src="images/itchio-icon.png" alt="Itch.io" class="icon-img"/></a>
+            <a href="https://sketchfab.com/wordsawKS" target="_blank" aria-label="Sketchfab"><img src="images/sketchfab-logo-white.png" alt="Sketchfab" class="icon-img"/></a>
           </div>
         </div>
-
         <div class="social-block">
           <h4>AstroSepu Studio:</h4>
           <div class="social-links">
-            <a href="https://www.youtube.com/@AstroSepuStudio" target="_blank" aria-label="YouTube">
-              <i class="fab fa-youtube"></i>
-            </a>
-            <a href="https://astrosepu-studio.itch.io" target="_blank" aria-label="Itch.io">
-              <img src="images/itchio-icon.png" alt="Itch.io" class="icon-img"/>
-            </a>
+            <a href="https://www.youtube.com/@AstroSepuStudio" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://astrosepu-studio.itch.io" target="_blank" aria-label="Itch.io"><img src="images/itchio-icon.png" alt="Itch.io" class="icon-img"/></a>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="sobremi" class="sobre-mi">
+    <section class="sobre-mi">
       <div class="video-sobremi">
-        <h2>Video portafolio</h2>
-          <p>
-          <iframe src="https://drive.google.com/file/d/1t-Cjr0Yaw7zDR9TR57Qa5T56EXUGVzpV/preview" width="640" height="480" allow="autoplay"></iframe>
-          </p>
+        <h2 data-i18n="video_title">Video portafolio</h2>
+        <p><iframe src="https://drive.google.com/file/d/1t-Cjr0Yaw7zDR9TR57Qa5T56EXUGVzpV/preview" width="640" height="480" allow="autoplay"></iframe></p>
       </div>
     </section>
 
     <section id="proyectos">
-      <h2>Mis Proyectos</h2>
+      <h2 data-i18n="section_projects">Mis Proyectos</h2>
       <div class="galeria">
 
-          <div class="proyecto">
-            <img src="images/ll.png" alt="Lethal Live" />
-            <div class="info">
-              <h3>Lethal Live</h3>
-              <p>
-                Lethal Live es un juego de supervivencia donde exploras los backrooms para recolectar objetos, venderlos y completar una cuota diaria.
-              </p>
-
-              <div class="project-links">
-                <a href="https://github.com/AstroSepuStudio/LethalLive" target="_blank" class="btn-github" aria-label="Repositorio GitHub">
-                  <i class="fab fa-github"></i> GitHub
-                </a>
-              </div>
-
+        <div class="proyecto">
+          <img src="images/ll.png" alt="Lethal Live" />
+          <div class="info">
+            <h3>Lethal Live</h3>
+            <p data-i18n="desc_lethallive">Lethal Live es un juego de supervivencia donde exploras los backrooms para recolectar objetos, venderlos y completar una cuota diaria.</p>
+            <div class="project-links">
+              <a href="https://github.com/AstroSepuStudio/LethalLive" target="_blank" class="btn-github"><i class="fab fa-github"></i> GitHub</a>
             </div>
           </div>
-        
-          <div class="proyecto">
-            <img src="images/ppl.png" alt="Project PL" />
-            <div class="info">
-              <h3>Project PL (VR)</h3>
-              <p>
-                Juego de horror en realidad virtual ambientado en la fundación SCP. 
-                Explora la fundación mientras escapas de los monstruos que han sido liberados como experimento, 
-                donde tú eres la rata de laboratorio.
-              </p>
+        </div>
 
-              <div class="project-links">
-                <a href="https://astrosepu-studio.itch.io/project-pl-vr" target="_blank" class="btn-project">
-                  Ver proyecto
-                </a>
-
-                <a href="https://github.com/AstroSepuStudio/Project-PL" target="_blank" class="btn-github" aria-label="Repositorio GitHub">
-                  <i class="fab fa-github"></i> GitHub
-                </a>
-              </div>
-
+        <div class="proyecto">
+          <img src="images/ppl.png" alt="Project PL" />
+          <div class="info">
+            <h3>Project PL (VR)</h3>
+            <p data-i18n="desc_projectpl">Juego de horror en realidad virtual ambientado en la fundación SCP. Explora la fundación mientras escapas de los monstruos que han sido liberados como experimento, donde tú eres la rata de laboratorio.</p>
+            <div class="project-links">
+              <a href="https://astrosepu-studio.itch.io/project-pl-vr" target="_blank" class="btn-project" data-i18n="btn_view">Ver proyecto</a>
+              <a href="https://github.com/AstroSepuStudio/Project-PL" target="_blank" class="btn-github"><i class="fab fa-github"></i> GitHub</a>
             </div>
           </div>
+        </div>
 
-          <div class="proyecto">
-            <img src="images/bubblebind.png" alt="Bubble Bind" />
-            <div class="info">
-              <h3>Bubble Bind</h3>
-              <p>
-                Juego de puzzles 2D con una mecánica única de burbujas que desafiarán tus habilidades cognitivas.
-                Incluye un editor de niveles para que puedas crear y compartir tus propios desafíos.
-              </p>
-
-              <div class="project-links">
-                <a href="https://astrosepu-studio.itch.io/bubble-bind" target="_blank" class="btn-project">
-                  Ver proyecto
-                </a>
-
-                <a href="https://github.com/AstroSepuStudio/Bubble-Bind" target="_blank" class="btn-github" aria-label="Repositorio GitHub">
-                  <i class="fab fa-github"></i> GitHub
-                </a>
-              </div>
-
+        <div class="proyecto">
+          <img src="images/bubblebind.png" alt="Bubble Bind" />
+          <div class="info">
+            <h3>Bubble Bind</h3>
+            <p data-i18n="desc_bubblebind">Juego de puzzles 2D con una mecánica única de burbujas que desafiarán tus habilidades cognitivas. Incluye un editor de niveles para que puedas crear y compartir tus propios desafíos.</p>
+            <div class="project-links">
+              <a href="https://astrosepu-studio.itch.io/bubble-bind" target="_blank" class="btn-project" data-i18n="btn_view">Ver proyecto</a>
+              <a href="https://github.com/AstroSepuStudio/Bubble-Bind" target="_blank" class="btn-github"><i class="fab fa-github"></i> GitHub</a>
             </div>
           </div>
+        </div>
 
-          <div class="proyecto">
-            <img src="images/chivivors.png" alt="Chivivors" />
-            <div class="info">
-              <h3>Chivivors</h3>
-              <p>
-                Una horda de monstruos, caos y acción en este juego tipo Vampire Survivors.
-                Roguelike con múltiples personajes, objetos y habilidades que te permiten jugar de innumerables formas.
-              </p>
-
-              <div class="project-links">
-                <a href="https://wordsaw.itch.io/chivivors" target="_blank" class="btn-project">
-                  Ver proyecto
-                </a>
-              </div>
+        <div class="proyecto">
+          <img src="images/chivivors.png" alt="Chivivors" />
+          <div class="info">
+            <h3>Chivivors</h3>
+            <p data-i18n="desc_chivivors">Una horda de monstruos, caos y acción en este juego tipo Vampire Survivors. Roguelike con múltiples personajes, objetos y habilidades que te permiten jugar de innumerables formas.</p>
+            <div class="project-links">
+              <a href="https://wordsaw.itch.io/chivivors" target="_blank" class="btn-project" data-i18n="btn_view">Ver proyecto</a>
             </div>
           </div>
+        </div>
 
-          <div class="proyecto">
-            <img src="images/perplexity.png" alt="Perplexity" />
-            <div class="info">
-              <h3>Perplexity</h3>
-              <p>
-                Juego de horror atmosférico con estética liminal inspirada por los conocidos Backrooms.
-                Adentrate en oscuros pasillos que te pondrán los pelos de punta y te harán cuestionar tu cordura.
-              </p>
-
-              <div class="project-links">
-                <a href="https://astrosepu-studio.itch.io/perplexity" target="_blank" class="btn-project">
-                  Ver proyecto
-                </a>
-
-                <a href="https://github.com/AstroSepuStudio/Perplexity" target="_blank" class="btn-github" aria-label="Repositorio GitHub">
-                  <i class="fab fa-github"></i> GitHub
-                </a>
-              </div>
+        <div class="proyecto">
+          <img src="images/perplexity.png" alt="Perplexity" />
+          <div class="info">
+            <h3>Perplexity</h3>
+            <p data-i18n="desc_perplexity">Juego de horror atmosférico con estética liminal inspirada por los conocidos Backrooms. Adentrate en oscuros pasillos que te pondrán los pelos de punta y te harán cuestionar tu cordura.</p>
+            <div class="project-links">
+              <a href="https://astrosepu-studio.itch.io/perplexity" target="_blank" class="btn-project" data-i18n="btn_view">Ver proyecto</a>
+              <a href="https://github.com/AstroSepuStudio/Perplexity" target="_blank" class="btn-github"><i class="fab fa-github"></i> GitHub</a>
             </div>
           </div>
+        </div>
 
-          <div class="proyecto">
-            <img src="images/wildstore.png" alt="Wildstore" />
-            <div class="info">
-              <h3>Wildstore</h3>
-              <p>
-                Simulador de supermercado en un mundo donde los clientes son mascotas inteligentes que quieren 
-                comprar productos para la semana.
-              </p>
-
-              <div class="project-links">
-                <a href="https://astrosepu-studio.itch.io/wild-store" target="_blank" class="btn-project">
-                  Ver proyecto
-                </a>
-
-                <a href="https://github.com/AstroSepuStudio/Wild-Store" target="_blank" class="btn-github" aria-label="Repositorio GitHub">
-                  <i class="fab fa-github"></i> GitHub
-                </a>
-              </div>
+        <div class="proyecto">
+          <img src="images/wildstore.png" alt="Wildstore" />
+          <div class="info">
+            <h3>Wildstore</h3>
+            <p data-i18n="desc_wildstore">Simulador de supermercado en un mundo donde los clientes son mascotas inteligentes que quieren comprar productos para la semana.</p>
+            <div class="project-links">
+              <a href="https://astrosepu-studio.itch.io/wild-store" target="_blank" class="btn-project" data-i18n="btn_view">Ver proyecto</a>
+              <a href="https://github.com/AstroSepuStudio/Wild-Store" target="_blank" class="btn-github"><i class="fab fa-github"></i> GitHub</a>
             </div>
           </div>
+        </div>
 
-          <div class="proyecto">
-            <img src="images/psp.png" alt="Psique Park" />
-            <div class="info">
-              <h3>Psique Park</h3>
-              <p>
-                Videojuego de puzzles con temática de terror que desafiará tu inteligencia.
-              </p>
-
-              <div class="project-links">
-                <a href="https://github.com/AstroSepuStudio/PsiquePark" target="_blank" class="btn-github" aria-label="Repositorio GitHub">
-                    <i class="fab fa-github"></i> GitHub
-                </a>
-              </div>
-              
+        <div class="proyecto">
+          <img src="images/psp.png" alt="Psique Park" />
+          <div class="info">
+            <h3>Psique Park</h3>
+            <p data-i18n="desc_psiquepark">Videojuego de puzzles con temática de terror que desafiará tu inteligencia.</p>
+            <div class="project-links">
+              <a href="https://github.com/AstroSepuStudio/PsiquePark" target="_blank" class="btn-github"><i class="fab fa-github"></i> GitHub</a>
             </div>
           </div>
-        
-          <div class="proyecto">
-            <img src="images/ThiefCats.png" alt="Thief Cats" />
-            <div class="info">
-              <h3>Thief Cats</h3>
-              <p>
-                Juego multijugador en el que los jugadores asumen el papel de gatos ladrones que deben robar objetos valiosos 
-                mientras evitan ser atrapados o el de un perro que debe acabar con ellos.
-              </p>
+        </div>
 
-              <div class="project-links">
-                <a href="https://drive.google.com/drive/folders/1iYqIxu1GOjFcpkJjBTsiP8pAgdkIB17f?usp=sharing" target="_blank" class="btn-project">
-                  Ver proyecto
-                </a>
-
-                <a href="https://github.com/AstroSepuStudio/Thief_Cats" target="_blank" class="btn-github" aria-label="Repositorio GitHub">
-                  <i class="fab fa-github"></i> GitHub
-                </a>
-              </div>
-
-              </div>
-          </div>
-        
-          <div class="proyecto">
-            <img src="images/parkour.png" alt="Parkour Training Arc" />
-            <div class="info">
-              <h3>Parkour Training Arc</h3>
-              <p>
-                Juego de plataformas 2D pixel art con mecánicas de parkour intensas.
-                Corre, salta y escala a través de un único nivel en el que si caes puedes perder todo tu progreso.
-              </p>
-
-              <div class="project-links">
-                <a href="https://wordsaw.itch.io/parkour-training-arc" target="_blank" class="btn-project">
-                  Ver proyecto
-                </a>
-              </div>
+        <div class="proyecto">
+          <img src="images/ThiefCats.png" alt="Thief Cats" />
+          <div class="info">
+            <h3>Thief Cats</h3>
+            <p data-i18n="desc_thiefcats">Juego multijugador en el que los jugadores asumen el papel de gatos ladrones que deben robar objetos valiosos mientras evitan ser atrapados o el de un perro que debe acabar con ellos.</p>
+            <div class="project-links">
+              <a href="https://drive.google.com/drive/folders/1iYqIxu1GOjFcpkJjBTsiP8pAgdkIB17f?usp=sharing" target="_blank" class="btn-project" data-i18n="btn_view">Ver proyecto</a>
+              <a href="https://github.com/AstroSepuStudio/Thief_Cats" target="_blank" class="btn-github"><i class="fab fa-github"></i> GitHub</a>
             </div>
           </div>
+        </div>
+
+        <div class="proyecto">
+          <img src="images/parkour.png" alt="Parkour Training Arc" />
+          <div class="info">
+            <h3>Parkour Training Arc</h3>
+            <p data-i18n="desc_parkour">Juego de plataformas 2D pixel art con mecánicas de parkour intensas. Corre, salta y escala a través de un único nivel en el que si caes puedes perder todo tu progreso.</p>
+            <div class="project-links">
+              <a href="https://wordsaw.itch.io/parkour-training-arc" target="_blank" class="btn-project" data-i18n="btn_view">Ver proyecto</a>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
 
     <section id="modelos">
-      <h2>Mis Modelos 3D</h2>
-
+      <h2 data-i18n="section_models">Mis Modelos 3D</h2>
       <div class="galeria-modelos">
-
         <div class="modelo-card">
-          <iframe title="Dragon Sword" 
-            frameborder="0" 
-            allowfullscreen 
-            mozallowfullscreen="true" 
-            webkitallowfullscreen="true" 
-            allow="autoplay; fullscreen; xr-spatial-tracking" 
-            xr-spatial-tracking 
-            execution-while-out-of-viewport 
-            execution-while-not-rendered 
-            web-share src="https://sketchfab.com/models/ee9ab43b98da4e398df42f3146f581c0/embed"> 
-          </iframe> 
+          <iframe title="Dragon Sword" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/ee9ab43b98da4e398df42f3146f581c0/embed"></iframe>
         </div>
-
         <div class="modelo-card">
-          <iframe title="Fancy Sword" 
-            frameborder="0" 
-            allowfullscreen 
-            mozallowfullscreen="true" 
-            webkitallowfullscreen="true" 
-            allow="autoplay; fullscreen; xr-spatial-tracking" 
-            xr-spatial-tracking 
-            execution-while-out-of-viewport 
-            execution-while-not-rendered 
-            web-share src="https://sketchfab.com/models/4c39eb7a763445b2a1ab67f8a9a462b1/embed"> 
-          </iframe>
+          <iframe title="Fancy Sword" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/4c39eb7a763445b2a1ab67f8a9a462b1/embed"></iframe>
         </div>
-
         <div class="modelo-card">
-          <iframe title="Blood Sword" 
-            frameborder="0" 
-            allowfullscreen 
-            mozallowfullscreen="true" 
-            webkitallowfullscreen="true" 
-            allow="autoplay; fullscreen; xr-spatial-tracking" 
-            xr-spatial-tracking 
-            execution-while-out-of-viewport 
-            execution-while-not-rendered web-share 
-            src="https://sketchfab.com/models/a30943cbc69247f6a40764462201bc22/embed"> 
-          </iframe>
+          <iframe title="Blood Sword" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/a30943cbc69247f6a40764462201bc22/embed"></iframe>
         </div>
-
         <div class="modelo-card">
-          <iframe title="Mecha Sword" 
-            frameborder="0" 
-            allowfullscreen mozallowfullscreen="true" 
-            webkitallowfullscreen="true" 
-            allow="autoplay; fullscreen; xr-spatial-tracking" 
-            xr-spatial-tracking 
-            execution-while-out-of-viewport 
-            execution-while-not-rendered 
-            web-share src="https://sketchfab.com/models/f6e2e2623eee4c79a69c813080711383/embed"> 
-          </iframe>
+          <iframe title="Mecha Sword" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/f6e2e2623eee4c79a69c813080711383/embed"></iframe>
         </div>
-
       </div>
     </section>
 
     <section id="contacto">
-      <h2>Contacto</h2>
-      <p>Puedes contactarme en: <a href="mailto:joaquinsepulvedaastroza@gmail.com">joaquinsepulvedaastroza@gmail.com</a></p>
+      <h2 data-i18n="section_contact">Contacto</h2>
+      <p>
+        <span data-i18n="contact_text">Puedes contactarme en:</span>
+        <a href="mailto:joaquinsepulvedaastroza@gmail.com">joaquinsepulvedaastroza@gmail.com</a>
+      </p>
     </section>
   </main>
+
+  <script src="lang.js"></script>
 </body>
 </html>
